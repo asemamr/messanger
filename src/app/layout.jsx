@@ -1,6 +1,12 @@
 import './globals.css'
+import Header from './header'
+import InputChat from './InputChat'
+import { getServerSession } from 'next-auth/next'
+import { authOption } from '@/pages/api/auth/[...nextauth]'
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const session = await getServerSession(authOption)
+
   return (
     <html lang="en">
       {/*
@@ -8,7 +14,11 @@ export default function RootLayout({ children }) {
         head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>
+        <Header session={session} />
+        {children}
+        <InputChat session={ session } />
+      </body>
     </html>
   )
 }
