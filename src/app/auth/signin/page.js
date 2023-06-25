@@ -1,12 +1,11 @@
 
 import { getProviders, signIn } from "next-auth/react";
-import AuthComponent from "./authComponent";
+import AuthComponent from "./AuthComponent";
 
 
 export default async function SignIn() {
   const providers = await getProviders()
 
-  console.log("the providers:>>", providers);
   
 
   // {
