@@ -6,7 +6,5 @@ export default async function fetcher() {
 
   data.sort((a, b)=> a.create_at - b.create_at);
 
-  
-
   return data;
 }
