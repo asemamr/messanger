@@ -11,7 +11,7 @@ export default function Header({ session }) {
       <header className="sticky z-10 shadow-sm py-7 px-20 flex justify-between items-center">
         <div className="flex items-center space-x-6">
           <div className="overflow-hidden h-20 w-20 rounded-full">
-            <Image
+            <img
               src={session.user.image}
               alt="profile"
               height="80"
@@ -23,7 +23,7 @@ export default function Header({ session }) {
           </div>
         </div>
         <div className="flex flex-col items-center space-y-2">
-          <Image
+          <img
             src={"https://links.papareact.com/jne"}
             alt="logo"
             height="10"
@@ -37,7 +37,7 @@ export default function Header({ session }) {
   return (
     <header className=" sticky z-10 shadow-sm p-7 flex flex-col justify-center space-y-2 items-center">
       <div className="flex space-x-4 items-center justify-center">
-        <Image
+        <img
           src={"https://links.papareact.com/jne"}
           alt={"logo"}
           height={"10"}

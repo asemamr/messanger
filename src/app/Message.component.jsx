@@ -12,7 +12,7 @@ export default function Message({ messageId, message , session}) {
   return (
     <div key={messageId} className={`mx-10 flex items-center  my-5 space-x-0 ${user && " space-x-3 text-right flex-row-reverse  justify-start"}`}>
       <div className={`w-14 h-14 overflow-hidden rounded-full ${user && "ml-3"}`}>
-        <Image
+        <img
           width="80"
           height="40"
           alt="profile picture"
