@@ -9,7 +9,7 @@ import Provider from "utils/provider";
 
 export default async function homePage() {
 
-  const res = await fetch(`${process.env.VERCEL_URL}/api/getMessages`)
+  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/getMessages`)
   const messages = await res.json();
   const session = await getServerSession(authOption)
 
