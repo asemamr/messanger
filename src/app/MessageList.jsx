@@ -25,12 +25,10 @@ export default function MessageList({initialMessages, session}) {
         return
       }
       else {
-        console.log("the data >>", data)
         await mutate(fetcher, {
           optimisticData: [...data, newMess],
           rollbackOnError: true
         })
-        console.log("the data after >>", data)
       }
     })
     return (() => {
