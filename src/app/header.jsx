@@ -1,18 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import SignOutButton from "./SignOutButton";
+import person from "../images/person2.jpg";
 
 
 export default function Header({ session }) {
-  
+  console.log("the session in the header", session);
 
   if (session) {
     return (
-      <header className="sticky z-10 shadow-sm py-7 px-20 flex justify-between items-center">
+      <header className="sticky top-0 bg-white  shadow-md z-10 py-7 px-20 flex justify-between items-center">
         <div className="flex items-center space-x-6">
           <div className="overflow-hidden h-20 w-20 rounded-full">
             <img
-              src={session.user.image}
+              src={session.user.image || person}
               alt="profile"
               height="80"
               width="80" />
