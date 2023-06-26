@@ -11,8 +11,8 @@ export const authOption = {
       clientSecret: process.env.FACEBOOK_CLIENT_SECRET
     }),
     GoogleProvider({
-      client_id: process.env.GOOGLE_CLIENT_ID,
-      client_secret: process.env.GOOGLE_CLIENT_SECRET,
+      clientId: "295742913031-3ogdmah5lnc67p9q06phug4tam37cvju.apps.googleusercontent.com",
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       authorization: {
         params: {
           prompt: "consent",
